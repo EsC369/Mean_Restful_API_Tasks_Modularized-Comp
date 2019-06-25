@@ -1,0 +1,14 @@
+<div id='wrapper'>
+  <a href='/'>Home</a>
+  <!-- SHOW PREVIEW OF Edit TASK -->
+  <form *ngIf="showTask['_id']" (submit)="updateTask(showTask['_id'])">
+    <hr>
+    <h3>Update Task</h3>
+    <p>Title: <input type="text" value="{{showTask.title}}" name="showTask.title" [(ngModel)]="showTask.title" /></p>
+    <p>Description: <input type="text" value="{{showTask.description}}" name="showTask.description"
+        [(ngModel)]="showTask.description" /></p>
+    <p><input class="btn btn-primary marg" type="submit" value="Update Task" /> <button class="btn btn-secondary"
+        (click)="cancelEdit()">Cancel</button></p>
+    <hr>
+  </form>
+</div>

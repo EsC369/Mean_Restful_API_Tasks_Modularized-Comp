@@ -1,0 +1,14 @@
+<h1 style="text-align: center;">All Tasks:</h1>
+<a href="tasks/create" class="btn btn-lg btn-info center-btn">Add A Task</a>
+<br>
+<br>
+<div *ngFor="let task of tasks" style="border: solid #ff5100;" class="center">
+	<ul style="list-style-type: none;">
+		<p> Task Title: {{ task.title }}  </p>
+		<p> Task Description: {{ task.description }} </p>
+		<p> Created at: {{ task.created_at }} </p>
+		<p> Actions:  <button class="btn btn-primary marg" (click)="getOneTask(task._id)">Edit</button> <button class="btn btn-danger" (click)="deleteTask(task._id)">Delete</button></p>
+	</ul>
+</div>
+
+

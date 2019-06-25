@@ -1,0 +1,11 @@
+<!-- ADD TASKS -->
+<div class="border" style="text-align:center;">
+  <form (submit)="createTask()">
+    <h3>Add Task</h3>
+    <p>Title: <input type="text" name="newTask.title" [(ngModel)]="newTask.title" /></p>
+    <p>Description: <input type="text" name="newTask.description" [(ngModel)]="newTask.description" /></p>
+    <input type='submit' class="btn btn-md btn-info"value='Add Product'> | <a href='/' class="btn btn-md btn-info">Cancel</a>
+  </form>
+  <br>
+</div>
+<hr>
